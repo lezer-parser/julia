@@ -78,18 +78,24 @@ SourceFile(
 
 x = r"foo"
 y = v"1.0"
+Markdown.md"Hello"
+triple"""Hello"""
+command`Hello`
 
 ==>
 
 SourceFile(
   AssignmentExpression(
     Identifier,
-    PrefixedString(Identifier,String)
+    PrefixedString(PrefixedStringPrefix(Identifier),String)
   ),
   AssignmentExpression(
     Identifier,
-    PrefixedString(Identifier,String),
+    PrefixedString(PrefixedStringPrefix(Identifier),String),
   ),
+  PrefixedString(PrefixedStringPrefix(Identifier, Identifier),String),
+  PrefixedString(PrefixedStringPrefix(Identifier),TripleString),
+  PrefixedString(PrefixedStringPrefix(Identifier),CommandString),
 )
 
 # Characters

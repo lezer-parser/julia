@@ -599,10 +599,17 @@ stringInterpolation {
   "$" immediateParen "(" !regular1 e !regular1 ")"
 }
 
+prefixedStringPrefix {
+  Identifier
+  | Identifier !immediate immediateDot !dot "." !dot prefixedStringPrefix
+}
+
 PrefixedString {
-  Identifier !immediate immediateDoubleQuote String |
-  Identifier !immediate immediateDoubleQuote TripleString |
-  Identifier !immediate immediateBackquote CommandString
+  PrefixedStringPrefix { prefixedStringPrefix } !immediate content {
+    immediateDoubleQuote String |
+    immediateDoubleQuote TripleString |
+    immediateBackquote CommandString
+  }
 }
 
 plusOperator {
