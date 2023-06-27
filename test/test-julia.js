@@ -1,4 +1,4 @@
-import { parser } from "../src/index.js"
+import { parser } from "../src/_parser.js"
 import { fileTests } from "@lezer/generator/dist/test";
 
 import * as fs from "fs";

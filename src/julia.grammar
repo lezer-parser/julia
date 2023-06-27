@@ -621,13 +621,13 @@ plusOperator {
 end { @specialize[@name=end,group="keyword"]<Identifier, "end"> }
 kw<term> { @specialize[@name={term},group="keyword"]<Identifier, term> }
 
-@external tokens terminator from "./index.tokens.js" { terminator }
-@external tokens Identifier from "./index.tokens.js" { Identifier }
-@external tokens BlockComment from "./index.tokens.js" { BlockComment }
-@external tokens tripleStringContent from "./index.tokens.js" { tripleStringContent }
-@external tokens stringContent from "./index.tokens.js" { stringContent }
-@external tokens commandStringContent from "./index.tokens.js" { commandStringContent }
-@external tokens layoutExtra from "./index.tokens.js" {
+@external tokens terminator from "./tokens.js" { terminator }
+@external tokens Identifier from "./tokens.js" { Identifier }
+@external tokens BlockComment from "./tokens.js" { BlockComment }
+@external tokens tripleStringContent from "./tokens.js" { tripleStringContent }
+@external tokens stringContent from "./tokens.js" { stringContent }
+@external tokens commandStringContent from "./tokens.js" { commandStringContent }
+@external tokens layoutExtra from "./tokens.js" {
   immediateParen,
   immediateColon,
   immediateBrace,

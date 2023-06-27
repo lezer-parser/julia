@@ -10,7 +10,7 @@ The grammar was initially ported from [tree-sitter-julia][] using
 Initializing dev environment:
 
 ```
-yarn
+npm install
 make
 ```
 

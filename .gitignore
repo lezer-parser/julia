@@ -1,5 +1,5 @@
 /node_modules/
-/src/index.js
-/src/index.terms.js
+/src/_parser.js
+/src/_parser.terms.js
 /dist/*.js
 /dist/*.cjs

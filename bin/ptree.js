@@ -2,7 +2,7 @@
 
 import { inspect } from "util";
 import { Tree } from "@lezer/common";
-import { parser } from "../src/index.js";
+import { parser } from "../src/_parser.js";
 
 function printTree(tree, input, from = 0, to = input.length) {
   let out = "";
